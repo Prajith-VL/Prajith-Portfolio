@@ -18,7 +18,7 @@ function validate(name: string, email: string, message: string): Errors {
 }
 
 const inputClass =
-  "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-[var(--muted)] outline-none transition focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]";
+  "w-full min-h-12 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-base text-white placeholder:text-[var(--muted)] outline-none transition focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] sm:min-h-0 sm:text-sm";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -111,7 +111,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full rounded-full border border-[var(--accent)] bg-[var(--accent-dim)] py-3 font-mono text-sm uppercase tracking-wider text-[var(--accent)] transition hover:bg-[var(--accent)]/20"
+        className="min-h-12 w-full rounded-full border border-[var(--accent)] bg-[var(--accent-dim)] py-3 font-mono text-sm uppercase tracking-wider text-[var(--accent)] transition active:bg-[var(--accent)]/25 hover:bg-[var(--accent)]/20"
       >
         Send message
       </button>

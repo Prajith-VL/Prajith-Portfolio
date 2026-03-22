@@ -35,10 +35,11 @@ export default function WaveBackground() {
       ctx.fillRect(0, 0, w, h);
 
       t += 0.006;
-      const gap = 14;
-      const startX = Math.floor(w * 0.28);
-      const cx = w * 0.82;
-      const cy = h * 0.42;
+      const narrow = w < 640;
+      const gap = narrow ? 22 : 14;
+      const startX = Math.floor(w * (narrow ? 0.42 : 0.28));
+      const cx = w * (narrow ? 0.88 : 0.82);
+      const cy = h * (narrow ? 0.35 : 0.42);
 
       for (let x = startX; x < w + gap; x += gap) {
         for (let y = 0; y < h; y += gap) {

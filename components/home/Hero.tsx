@@ -8,12 +8,14 @@ import { HiArrowDownTray } from "react-icons/hi2";
 import { siteConfig } from "@/lib/site-config";
 
 const btnBase =
-  "inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 font-mono text-xs uppercase tracking-wider text-white transition hover:border-[var(--accent)] hover:bg-[var(--accent-dim)] hover:text-[var(--accent)]";
+  "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 font-mono text-xs uppercase tracking-wider text-white transition active:bg-white/10 sm:w-auto sm:min-h-11 sm:py-2.5 hover:border-[var(--accent)] hover:bg-[var(--accent-dim)] hover:text-[var(--accent)]";
 
 export default function Hero() {
   return (
-    <section className="relative z-10 flex min-h-[100svh] flex-col justify-center px-4 pb-24 pt-28 sm:px-6 lg:px-8">
-      <div className="mx-auto w-full max-w-6xl">
+    <section
+      className="relative z-10 flex min-h-[100dvh] min-h-[100svh] flex-col justify-center px-[max(1rem,env(safe-area-inset-left))] pb-[max(2rem,env(safe-area-inset-bottom))] pr-[max(1rem,env(safe-area-inset-right))] pt-[max(6.5rem,calc(env(safe-area-inset-top)+5.5rem))] sm:px-6 lg:px-8"
+    >
+      <div className="mx-auto w-full min-w-0 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -55,7 +57,7 @@ export default function Hero() {
         />
 
         <motion.p
-          className="max-w-xl text-base leading-relaxed text-[var(--muted)] sm:text-lg"
+          className="max-w-xl text-base leading-relaxed text-[var(--muted)] [text-wrap:pretty] sm:text-lg"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.55 }}
@@ -64,7 +66,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="mt-10 flex flex-wrap gap-3"
+          className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.65, duration: 0.5 }}
@@ -93,7 +95,10 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
         >
-          <Link href="/projects" className="inline-flex items-center gap-2 hover:text-[var(--accent)]">
+          <Link
+            href="/projects"
+            className="inline-flex min-h-12 items-center gap-2 py-2 hover:text-[var(--accent)] active:text-[var(--accent)]"
+          >
             Explore my work
             <span aria-hidden className="text-[var(--accent)]">
               ↓

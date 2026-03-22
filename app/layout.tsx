@@ -22,6 +22,12 @@ export const metadata: Metadata = {
   description: siteConfig.tagline,
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover" as const,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,9 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full`}>
-      <body className="relative min-h-full flex flex-col bg-black antialiased">
+      <body className="relative flex min-h-[100dvh] flex-col overflow-x-clip bg-black antialiased">
         <Navbar />
-        <main className="relative z-[1] flex-1">{children}</main>
+        <main className="relative z-[1] min-w-0 flex-1 overflow-x-clip">{children}</main>
       </body>
     </html>
   );

@@ -12,12 +12,17 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: clip;
+  -webkit-tap-highlight-color: rgba(0, 240, 255, 0.12);
 }
 
 ::selection {

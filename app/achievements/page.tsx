@@ -21,7 +21,7 @@ const certifications = [
 
 export default function AchievementsPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 pb-20 pt-28 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-6xl px-[max(1rem,env(safe-area-inset-left))] pb-[max(2.5rem,env(safe-area-inset-bottom))] pr-[max(1rem,env(safe-area-inset-right))] pt-[max(7rem,calc(5.5rem+env(safe-area-inset-top)))] sm:px-6 lg:px-8">
       <PageHeader
         eyebrow="// Milestones"
         title="Achievements"

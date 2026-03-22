@@ -60,7 +60,7 @@ export default function Timeline() {
                   href={item.action.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[var(--accent)] hover:underline"
+                  className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg py-1 font-mono text-xs uppercase tracking-wider text-[var(--accent)] active:bg-[var(--accent-dim)] hover:underline"
                 >
                   <ActionIcon className="h-4 w-4" />
                   {item.action.label}
@@ -72,7 +72,7 @@ export default function Timeline() {
       </ul>
 
       <motion.div
-        className="mt-12 flex flex-wrap gap-3"
+        className="mt-12 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -90,14 +90,14 @@ export default function Timeline() {
           href={siteConfig.hackathonArticle}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 font-mono text-xs uppercase tracking-wider text-white hover:border-[var(--accent)]"
+          className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-white/15 px-4 py-2.5 font-mono text-xs uppercase tracking-wider text-white active:bg-white/5 sm:w-auto sm:justify-start hover:border-[var(--accent)]"
         >
           <FaLinkedinIn className="h-4 w-4 text-[var(--accent)]" />
           Hackathon article
         </a>
         <Link
           href="/contact"
-          className="inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/50 bg-[var(--accent-dim)] px-4 py-2 font-mono text-xs uppercase tracking-wider text-[var(--accent)]"
+          className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-[var(--accent)]/50 bg-[var(--accent-dim)] px-4 py-2.5 font-mono text-xs uppercase tracking-wider text-[var(--accent)] active:bg-[var(--accent)]/20 sm:w-auto sm:justify-start"
         >
           Get in touch
         </Link>

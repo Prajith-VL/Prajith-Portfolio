@@ -10,7 +10,7 @@ type Props = {
 
 export default function PageHeader({ eyebrow, title, subtitle }: Props) {
   return (
-    <header className="mb-12 max-w-3xl">
+    <header className="mb-10 max-w-3xl sm:mb-12">
       {eyebrow && (
         <motion.p
           className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-[var(--accent)]"
@@ -31,7 +31,7 @@ export default function PageHeader({ eyebrow, title, subtitle }: Props) {
       </motion.h1>
       {subtitle && (
         <motion.p
-          className="mt-4 text-base leading-relaxed text-[var(--muted)] sm:text-lg"
+          className="mt-4 text-base leading-relaxed text-[var(--muted)] [text-wrap:pretty] sm:text-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.15, duration: 0.4 }}
