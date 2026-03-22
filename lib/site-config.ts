@@ -10,7 +10,8 @@ export const siteConfig = {
   github: "https://github.com/Prajith-VL",
   linkedin: "https://www.linkedin.com/in/prajith-loganathan",
   leetcode: "https://leetcode.com/u/Prajith-VL/",
-  /** Replace with your SNS GenAI Sprint post URL when available. */
-  hackathonArticle: "https://www.linkedin.com/in/prajith-loganathan",
+  /** SNS GenAI Sprint hackathon — LinkedIn article. */
+  hackathonArticle:
+    "https://www.linkedin.com/pulse/from-idea-win-our-journey-sns-genai-sprint-hackathon-prajith-v-l-5026f/",
   resumePath: "/resume.pdf",
 } as const;
