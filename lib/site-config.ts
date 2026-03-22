@@ -14,4 +14,19 @@ export const siteConfig = {
   hackathonArticle:
     "https://www.linkedin.com/pulse/from-idea-win-our-journey-sns-genai-sprint-hackathon-prajith-v-l-5026f/",
   resumePath: "/resume.pdf",
+  /** Google Drive folders for certificates. */
+  certifications: [
+    {
+      label: "Databricks Generative AI Certifications",
+      url: "https://drive.google.com/drive/folders/1c3Cbio7zuGttyvbXIPxMup7oQwo47KN5?usp=drive_link",
+    },
+    {
+      label: "IBM SkillsBuild AI Certifications",
+      url: "https://drive.google.com/drive/folders/1s1FuuwxqEKMl3A4I6lglRS8QYQf4jY3-?usp=drive_link",
+    },
+    {
+      label: "BYTEXL Programming Certifications",
+      url: "https://drive.google.com/drive/folders/1d0pOHM6LHE0Hiv6H5q7iALrmED7QPhVj?usp=sharing",
+    },
+  ],
 } as const;

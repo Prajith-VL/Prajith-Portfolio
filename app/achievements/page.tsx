@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import PageHeader from "@/components/layout/PageHeader";
 import FadeIn from "@/components/ui/FadeIn";
+import { siteConfig } from "@/lib/site-config";
 
 const Timeline = dynamic(() => import("@/components/achievements/Timeline"), {
   loading: () => <div className="h-96 animate-pulse rounded-2xl bg-white/5" />,
@@ -12,12 +13,6 @@ export const metadata: Metadata = {
   description:
     "LeetCode milestones, hackathon win, internship experience, and certifications.",
 };
-
-const certifications = [
-  "Databricks Generative AI Certifications",
-  "IBM SkillsBuild AI Certifications",
-  "BYTEXL Programming Certifications",
-];
 
 export default function AchievementsPage() {
   return (
@@ -35,12 +30,19 @@ export default function AchievementsPage() {
           Certifications
         </h2>
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {certifications.map((c) => (
-            <li
-              key={c}
-              className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-[var(--muted)]"
-            >
-              {c}
+          {siteConfig.certifications.map(({ label, url }) => (
+            <li key={label}>
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-[3.25rem] flex-col justify-center rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-[var(--muted)] transition hover:border-[var(--accent)]/40 hover:bg-[var(--accent-dim)] hover:text-white active:bg-white/5"
+              >
+                <span className="font-medium text-white">{label}</span>
+                <span className="mt-1 font-mono text-[11px] uppercase tracking-wider text-[var(--accent)]">
+                  View on Google Drive →
+                </span>
+              </a>
             </li>
           ))}
         </ul>
