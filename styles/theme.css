@@ -1,0 +1,9 @@
+/* Complements app/globals.css — design tokens for the dark futuristic theme */
+
+:root {
+  --bg: #000000;
+  --text: #ffffff;
+  --muted: #a0a0a0;
+  --accent: #00f0ff;
+  --accent-dim: rgba(0, 240, 255, 0.15);
+}
