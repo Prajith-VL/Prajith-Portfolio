@@ -8,7 +8,7 @@ export const siteConfig = {
   phone: "+91 9994694057",
   location: "Coimbatore, Tamil Nadu, India",
   github: "https://github.com/Prajith-VL",
-  linkedin: "https://www.linkedin.com/in/prajith-loganathan",
+  linkedin: "https://www.linkedin.com/in/prajith-vl-/",
   leetcode: "https://leetcode.com/u/Prajith-VL/",
   /** SNS GenAI Sprint hackathon — LinkedIn article. */
   hackathonArticle:
