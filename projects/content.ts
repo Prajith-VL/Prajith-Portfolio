@@ -27,4 +27,18 @@ export const projects: Project[] = [
     tech: ["Python", "FAISS", "LLM", "Firebase", "Google Workspace APIs"],
     github: "https://github.com/ldmembers/infygen",
   },
+  {
+    name: "StudyHUB – Academic Productivity Platform",
+    description:
+      "Academic productivity platform that helps students manage study resources, organize learning workflows, and streamline academic collaboration through a modern full-stack SaaS architecture.",
+    tech: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "SaaS Architecture"],
+    github: "https://github.com/Prajith-VL/Study-HUB",
+  },
+  {
+    name: "TASK-MANAGER – Smart Task and Productivity Management System",
+    description:
+      "Full-stack task management application designed to help users organize, track, and manage daily tasksefficiently with intuitive workflows, real-time updates, and productivity-focused design. ",
+    tech: ["React", "JavaScript", "Node.js", "Express.js", "Database Integration"],
+    github: "https://github.com/Prajith-VL/Task-Manager-App",
+  },
 ];
